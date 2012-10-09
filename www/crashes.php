@@ -328,6 +328,7 @@ function display_crashes($status) {
 				if ($tab['issue_id'] == "") {
 					mysql_query(bicou_mysql_update(array('issue_id' => bicou_issue_id($tab['stack_trace'], $tab['package_name'])), "id = ?", array($tab['id'])));
 				}
+				$value = '<a class="crashlink" href="report.php?issue_id='.$tab['issue_id'].'" onclick="event.cancelBubble=true;">' . $value . '</a>';
 			} else if ($k == "last_seen") {
 				$value = date("d/M/Y G:i:s", $v);
 			} else if ($k == "status") {

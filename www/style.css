@@ -32,6 +32,15 @@ table.crashes tbody tr:hover td {
 	color: #009;
 }
 
+.crashlink {
+	text-decoration: none;
+	color: #669 !important;
+}
+.crashlink:hover {
+	text-decoration: none;
+	color: #009 !important;
+}
+
 a, a:hover, a:visited {
 	text-decoration: none;
 	color: #33F;
