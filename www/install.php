@@ -3,7 +3,7 @@
 include "crashes.php";
 include "html.php";
 
-if (file_exists($_SERVER[DOCUMENT_ROOT]."/.htaccess") && file_exists($_SERVER[DOCUMENT_ROOT]."/config.php")) {
+if (file_exists($_SERVER[DOCUMENT_ROOT]."/.htaccess") && file_exists($_SERVER[DOCUMENT_ROOT]."config.php")) {
 	echo '<div class="ok">Installation is already done.</div>';
 	exit;
 }

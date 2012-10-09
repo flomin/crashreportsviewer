@@ -1,7 +1,7 @@
 <?php
 
-if (!file_exists($_SERVER[DOCUMENT_ROOT]."/.htaccess") || !file_exists($_SERVER[DOCUMENT_ROOT]."/config.php")) {
-	echo '<p class="error">Project setup is not complete.<br />-&gt; <a href="install.php">Go to installation</a>?</p>';
+if (!file_exists(".htaccess") || !file_exists("config.php")) {
+	echo '<p class="error">Project setup is not complete.<br />-&gt; <a href="install.php">Go to installation</a>?</p> (' . ".htaccess" . ' or ' . "config.php" . ' doesn\'t exists)';
 }
 
 ?>

@@ -31,9 +31,9 @@ function showReport($tab) {
 
 // Show button
 echo '<div style="float: right; margin-right: 100px;">';
-echo '<a class="button" href="javascript:setStatusAndGo(\''.$_GET['issue_id'].'\', \''.STATE_FIXED.'\', \'/reports.php\');">mark as fixed</a> ';
-echo '<a class="button" href="javascript:setStatusAndGo(\''.$_GET['issue_id'].'\', \''.STATE_INVALID.'\', \'/reports.php\');">mark as invalid</a> ';
-echo '<a class="button" href="javascript:setStatusAndGo(\''.$_GET['issue_id'].'\', \''.STATE_NEW.'\', \'/reports.php\');">mark as new</a> ';
+echo '<a class="button" href="javascript:setStatusAndGo(\''.$_GET['issue_id'].'\', \''.STATE_FIXED.'\', \'reports.php\');">mark as fixed</a> ';
+echo '<a class="button" href="javascript:setStatusAndGo(\''.$_GET['issue_id'].'\', \''.STATE_INVALID.'\', \'reports.php\');">mark as invalid</a> ';
+echo '<a class="button" href="javascript:setStatusAndGo(\''.$_GET['issue_id'].'\', \''.STATE_NEW.'\', \'reports.php\');">mark as new</a> ';
 echo "</div>\n";
 
 // Display reports

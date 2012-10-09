@@ -11,20 +11,20 @@ function show_output() {
 		<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 		<script type="text/javascript" language="javascript">
 	function setStatusAndGo(iid, stat, url) {
-		$.get("/ajax.php", { action: "update_status", status: stat, issue_id: iid }, function() {
+		$.get("ajax.php", { action: "update_status", status: stat, issue_id: iid }, function() {
 			document.location=url;
 		});
 	}
 		</script>
 		<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="excanvas.js"></script><![endif]-->
-		<script language="javascript" type="text/javascript" src="/dist/jquery.jqplot.min.js"></script>
-		<script type="text/javascript" src="/dist/plugins/jqplot.pieRenderer.min.js"></script>
-		<script type="text/javascript" src="/dist/plugins/jqplot.dateAxisRenderer.min.js"></script>
-		<script type="text/javascript" src="/dist/plugins/jqplot.highlighter.min.js"></script>
-		<script type="text/javascript" src="/dist/plugins/jqplot.cursor.min.js"></script>
+		<script language="javascript" type="text/javascript" src="dist/jquery.jqplot.min.js"></script>
+		<script type="text/javascript" src="dist/plugins/jqplot.pieRenderer.min.js"></script>
+		<script type="text/javascript" src="dist/plugins/jqplot.dateAxisRenderer.min.js"></script>
+		<script type="text/javascript" src="dist/plugins/jqplot.highlighter.min.js"></script>
+		<script type="text/javascript" src="dist/plugins/jqplot.cursor.min.js"></script>
 
-		<link rel="stylesheet" type="text/css" href="/dist/jquery.jqplot.css" />
-		<link rel="stylesheet" type="text/css" href="/style.css"></link>
+		<link rel="stylesheet" type="text/css" href="dist/jquery.jqplot.css" />
+		<link rel="stylesheet" type="text/css" href="style.css"></link>
 	</head>
 
 	<body>

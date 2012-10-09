@@ -84,8 +84,8 @@ function display_versions() {
 		$nb_errors[] = $tab['nb_errors'];
 	}
 
-	echo "<h1>Application versions</h1>\n";
-	echo "<table class=\"crashes\" style=\"width: 600px;\">\n<thead>\n<tr>\n";
+	echo "<h1 onclick=\"$('#versions_id').toggle();\">Application versions</h1>\n";
+	echo "<div id='versions_id'><table class=\"crashes\" style=\"width: 600px;\">\n<thead>\n<tr>\n";
 	foreach ($versions as $id => $version) {
 		echo "<th>$version<br />(".$names[$id].")</th>\n";
 	}
@@ -99,7 +99,7 @@ function display_versions() {
 	}
 
 	echo "</tbody>\n</table>\n";
-	echo '<div id="chart1" style="height:300px;width:300px; "></div>';
+	echo '<div id="chart1" style="height:300px;width:300px; "></div></div>';
 	echo "<script>$(document).ready(function(){
   var data = [";
 
@@ -307,7 +307,7 @@ function display_crashes($status) {
 			echo "</tr>\n</thead>\n<tbody>\n";
 		}
 
-		echo '<tr id="id_'.$tab['id'].'" onclick="javascript:document.location=\'/report.php?issue_id='.$tab['issue_id'].'\';">'."\n";
+		echo '<tr id="id_'.$tab['id'].'" onclick="javascript:document.location=\'report.php?issue_id='.$tab['issue_id'].'\';">'."\n";
 		foreach ($tab as $k => $v) {
 			if ($k == "stack_trace") {
 				$lines = explode("\n", $v);
@@ -326,7 +326,7 @@ function display_crashes($status) {
 				}
 
 				if ($tab['issue_id'] == "") {
-					mysql_query(bicou_mysql_update(array('issue_id' => md5($value)), "id = ?", array($tab['id'])));
+					mysql_query(bicou_mysql_update(array('issue_id' => bicou_issue_id($tab['stack_trace'], $tab['package_name'])), "id = ?", array($tab['id'])));
 				}
 			} else if ($k == "last_seen") {
 				$value = date("d/M/Y G:i:s", $v);
